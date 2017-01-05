@@ -1,6 +1,7 @@
 foodHub.controller('LoginCtrl',['UserService','toastr','$scope','$window','$location','$rootScope','$localStorage', function(UserService, toastr,$scope,$window,$location,$rootScope,$localStorage) 
 {
 	var self = this;
+	// ghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 	$scope.user = {id: '', fullName: '', userName: '', email: '', password: '',authToken:''};
 	$scope.userName='';
 	$scope.db = window.openDatabase("foodhub", '1', 'foodhub db', 1024*1024*100); 
