@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="icon" type="image/png"
+	href="theme/images/splash/android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" sizes="196x196"
+	href="theme/images/splash/apple-touch-icon-196x196.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="theme/images/splash/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="theme/images/splash/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="theme/images/splash/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="theme/images/splash/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="theme/images/splash/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="theme/images/splash/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="theme/images/splash/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="theme/images/splash/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="57x57"
+	href="theme/images/splash/apple-touch-icon-57x57.png">
+<link rel="icon" type="image/png"
+	href="theme/images/splash/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png"
+	href="theme/images/splash/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png"
+	href="theme/images/splash/favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="theme/images/splash/favicon.ico"
+	type="image/x-icon" />
+<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'> -->
+
+<title>Food Hub</title>
+
+<link rel="stylesheet" type="text/css" href="theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="theme/css/skin.css">
+<link rel="stylesheet" type="text/css" href="theme/css/framework.css">
+<link rel="stylesheet" type="text/css" href="theme/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="lib/angular-toastr/angular-toastr.css">
+
+<script type="text/javascript" src="lib/w3school/w3data.js"></script>
+<script type="text/javascript" src="theme/js/jquery.js"></script>
+<script type="text/javascript" src="theme/js/plugins.js"></script>
+<script type="text/javascript" src="theme/js/custom.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="lib/ngRoute/angular.min.js"></script>
+<script src="lib/ngRoute/angular-route.js"></script>
+
+<script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/routing/ui-router.js"></script>
+<script type="text/javascript" src="js/service/services.js"></script>
+
+<script type="text/javascript" src="lib/angular-toastr/angular-toastr.tpls.js"></script>
+<script type="text/javascript" src="lib/photo/photo.js"></script>
+<script type="text/javascript" src="js/controller/SellerController.js"></script>
+<script type="text/javascript" src="js/controller/LoginController.js"></script>
+<script type="text/javascript" src="js/controller/RegistrationController.js"></script>
+<script type="text/javascript" src="js/controller/ResetPasswordController.js"></script>
+<script type="text/javascript" src="js/controller/FacebookController.js"></script>
+<script type="text/javascript" src="cordova.js"></script>	
+
+<script type="text/javascript">app.initialize();</script>
+
+</head>
+<body ng-app="foodHub" ng-controller="LoginCtrl as ctrl11">
+	<div id="page-transitions">
+
+		<div class="page-preloader page-preloader-dark">
+		    <div class="loader loader-frames"><i></i><i></i><i></i><i></i></div>
+		</div>
+		
+		<!-- <div class="header header-light header-full">
+		    <a href="#" class="header-icon header-icon-1 open-left-sidebar"><i class="fa fa-navicon"></i></a>
+		    <input type="text" placeholder="Search" class="header-search"/>
+		    <a href="#" class="header-icon header-icon-4 open-right-sidebar"><i class="fa fa-shopping-cart"></i></a>
+		</div> -->
+		
+		<div class="header header-light">
+			<a ng-click="isUserLogin()" class="header-icon header-icon-1 open-left-sidebar"><i class="fa fa-navicon"></i></a> 
+			<a href="index.html" class="header-logo scale-hover"></a> 
+			<a href="#" class="header-icon header-icon-4 open-right-sidebar"><i class="fa fa-envelope-o"></i></a>
+		</div>
+		
+		<div ng-view></div>
+		
+		<!-- <div class="footer footer-full footer-light">
+			<div class="swiper-slide bg-2">
+		        <div class="coverpage-bottom">
+					<a href="#" class="coverpage-bottom-button-1 show-share-bottom"><i class="fa fa-filter"></i>Search Filter</a>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+	
+<div class="sidebar-left sidebar-light">
+    <div class="sidebar-scroll">
+        <div class="sidebar-header sidebar-header-background">
+            <h1>Food Hub</h1>
+            <h2>Just on click away.</h2>
+            <img class="sidebar-logo-image preload-image" data-original="theme/images/preload-logo.png">
+            <div class="sidebar-header-controls">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-phone"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="close-sidebar"><i class="fa fa-times"></i></a>
+            </div>
+        </div>        
+        <div class="sidebar-divider" >Navigation</div>
+        <div class="sidebar-menu"> 
+            <a class="menu-item active-item" href="#home">
+                <i class="bg-red-dark fa fa-star-o"></i>Welcome<i class="fa fa-circle"></i> 
+            </a> 
+            <div ng-if="!flag">
+	            <a class="menu-item" href="#login">
+	                <i class="bg-red-dark fa fa-lock"></i>Login<i class="fa fa-circle"></i>  
+	            </a>
+            </div>
+            <div ng-if="flag">
+	            <a class="menu-item" href="#resetPassword">
+	                <i class="bg-red-dark fa fa-lock"></i>Reset Password<i class="fa fa-circle"></i>  
+	            </a>
+            </div>
+             <div ng-if="flag">
+	            <a class="menu-item" href="#seller">
+	                <i class="bg-red-dark fa fa-lock"></i>Become Seller<i class="fa fa-circle"></i>  
+	            </a>
+            </div>
+            <div ng-if="flag">
+	            <a class="close-sidebar menu-item"  ng-click="logout()">
+	                <i class="bg-red-dark fa fa-times"></i>Logout<i class="fa fa-circle"></i>
+	            </a>
+            </div>
+        </div>    
+        <div class="sidebar-divider no-bottom">Copyright <span id="copyright-year-sidebar"></span>. All rights Reserved</div>
+    </div>
+</div>
+<div w3-include-html="include/menu-right.html"></div>
+<script>
+		w3IncludeHTML();
+</script>
+</body>
+</html>
