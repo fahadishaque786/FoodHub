@@ -14,6 +14,7 @@ foodHub.controller('FacebookCtrl',['UserService','$scope','$window','$location',
 	//Function facebook login
 	self.onFacebookLogin= function(option) 
 	{
+		//jhjhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
 		$scope.authorize_url  = "https://m.facebook.com/dialog/oauth?";
 		$scope.authorize_url += "client_id=" + $scope.appId;
