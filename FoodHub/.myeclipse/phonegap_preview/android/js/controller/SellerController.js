@@ -2,7 +2,7 @@
 
 foodHub.controller('SellerCtrl', [ 'UserService', 'toastr',
 		function(UserService, toastr) {
-
+//changes in seller
 			var self = this;
 			self.item = {
 				itemName : '',
